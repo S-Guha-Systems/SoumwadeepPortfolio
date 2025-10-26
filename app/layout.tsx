@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import { Josefin_Sans } from "next/font/google";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
-import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
-import { Container } from "@mui/material";
-import AppThemeProvider from "@/context/AppThemeProvider";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import "@/components/globals.css";
+import "./globals.css";
 
 const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
@@ -55,21 +49,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={josefinSans.variable} suppressHydrationWarning>
-      <body>
-        <AppRouterCacheProvider>
-          <AppThemeProvider>
-            <InitColorSchemeScript attribute="class" />
-            <main>
-              <Container maxWidth="xl">
-                <Navbar />
-                {children}
-                <Footer />
-              </Container>
-            </main>
-          </AppThemeProvider>
-        </AppRouterCacheProvider>
-      </body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${josefinSans.variable} antialiased`}>{children}</body>
     </html>
   );
 }
