@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
-body{
+@theme {
+  --font-sans: "Josefin Sans", sans-serif;
+}
+
+body {
   text-align: center;
 }

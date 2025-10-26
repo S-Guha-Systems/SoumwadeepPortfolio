@@ -49,7 +49,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      className="bg-white dark:bg-gray-950 scheme-light dark:scheme-dark"
+      suppressHydrationWarning
+    >
       <body className={`${josefinSans.variable} antialiased`}>{children}</body>
     </html>
   );
