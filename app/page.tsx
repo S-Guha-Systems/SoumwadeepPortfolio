@@ -1,14 +1,11 @@
-import React from 'react'
-
+import LeftImageContentBox from "@/components/LeftImageContentBox";
+import homepic from "@/img/homepic.jpg";
 const Home = () => {
-  return (
-    <div>
-      <h1>Welcome to my portfolio</h1>
-      <p>
-        Hi, I’m Soumwadeep Guha — a passionate Full-Stack Developer skilled in Next.js, React, Bootstrap, MUI, C++, PostgreSQL, Firebase & AWS. Explore my projects, hackathon wins, and creative tech journey building smart, scalable web apps!
-      </p>
-    </div>
-  )
-}
+  return LeftImageContentBox(
+    "Welcome to My Portfolio",
+    "Discover my projects, skills, and experiences as a Full-Stack Developer. Explore my journey in building smart, scalable web applications using Next.js, React, PostgreSQL, Firebase, and AWS.",
+    homepic
+  );
+};
 
-export default Home
+export default Home;

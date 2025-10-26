@@ -1,9 +1,135 @@
-@import "tailwindcss";
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold !important;
+}
+img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+/* 360 deg rotation */
+/* .loading { width: 80px; animation-name: spin; animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: linear; } 
 
-@theme {
-  --font-sans: "Josefin Sans", sans-serif;
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-body {
-  text-align: center;
+*/
+
+/* bulge out and back */
+.loading {
+  width: 80px;
+  animation: bulge 1.5s ease-in-out infinite;
+}
+
+@keyframes bulge {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+#centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.outer {
+  display: table;
+  height: 100%;
+}
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+/* Animation CSS */
+#animateimg,
+#animateimg2 {
+  animation: 2s ease-in-out infinite alternate-reverse both up-down;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+#animate,
+#animateimg:hover {
+  animation: 30s linear infinite animate;
+}
+#animate2,
+#animateimg2:hover {
+  animation: 30s linear infinite animate2;
+}
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateY(0);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(-370deg);
+  }
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: perspective(1000px) rotateY(0);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(370deg);
+  }
+}
+@keyframes type {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+/* New class for always up-down animation */
+#animateupdown {
+  animation: 2s ease-in-out infinite alternate-reverse both up-down;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+/* On hover → stop animation */
+#animateupdown:hover {
+  animation-play-state: paused;
 }
