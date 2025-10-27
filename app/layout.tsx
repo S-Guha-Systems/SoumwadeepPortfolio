@@ -7,6 +7,8 @@ import { Suspense } from "react";
 import Loading from "./loading";
 import BootstrapClient from "@/components/BootstrapClient";
 import Script from "next/script";
+import MainNavbar from "@/components/MainNavbar";
+import MainFooter from "@/components/MainFooter";
 
 const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
@@ -106,7 +108,9 @@ export default function RootLayout({
       </head>
       <body className={`${josefinSans.className}`}>
         <div className="container">
+          <MainNavbar />
           <Suspense fallback={<Loading />}>{children}</Suspense>
+          <MainFooter />
         </div>
         <BootstrapClient />
       </body>
