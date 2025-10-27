@@ -6,12 +6,52 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { Suspense } from "react";
 import Loading from "./loading";
 import BootstrapClient from "@/components/BootstrapClient";
+import Script from "next/script";
 
 const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
   subsets: ["latin"],
   display: "swap",
 });
+
+const themeInit = `
+(() => {
+  try {
+    const getStored = () => localStorage.getItem('theme'); // 'light' | 'dark' | 'auto' | null
+    const prefersDarkMql = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const resolve = (stored) => {
+      if (stored === 'light' || stored === 'dark') return stored;
+      return prefersDarkMql.matches ? 'dark' : 'light'; // treat null/'auto' as system
+    };
+
+    const apply = (mode) => {
+      document.documentElement.setAttribute('data-bs-theme', mode);
+    };
+
+    // initial paint
+    apply(resolve(getStored()));
+
+    // react to system changes ONLY when stored is 'auto' or null
+    const onChange = () => {
+      const stored = getStored() || 'auto';
+      if (stored === 'auto') apply(resolve('auto'));
+    };
+
+    // Cross-browser listeners (Safari compatibility)
+    if (typeof prefersDarkMql.addEventListener === 'function') {
+      prefersDarkMql.addEventListener('change', onChange);
+    } else if (typeof prefersDarkMql.addListener === 'function') {
+      prefersDarkMql.addListener(onChange);
+    }
+
+    // If the tab was backgrounded during a system change, fix on visibility
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) onChange();
+    });
+  } catch {}
+})();
+`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://soumwadeepguha.com"),
@@ -56,11 +96,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${josefinSans.variable}`}>
+      {/* Run before React hydrates */}
+      <head>
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: themeInit }}
+        />
+      </head>
+      <body className={`${josefinSans.className}`}>
         <div className="container">
           <Suspense fallback={<Loading />}>{children}</Suspense>
-          <BootstrapClient />
         </div>
+        <BootstrapClient />
       </body>
     </html>
   );
