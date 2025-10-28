@@ -4,14 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const pages = [
-  { name: "Home", href: "/" },
-  { name: "About Myself", href: "/about" },
-  { name: "My Experience", href: "/experience" },
-  { name: "My Projects", href: "/projects" },
-  { name: "My Certificates", href: "/certificates" },
-  { name: "My Blogs", href: "/blogs" },
-  { name: "Contact Me", href: "/contact" },
-  { name: "Login", href: "/login" },
+  { name: "Home", href: "/", icon: "bi-house" },
+  { name: "About Myself", href: "/about", icon: "bi-person" },
+  { name: "My Experience", href: "/experience", icon: "bi-briefcase" },
+  { name: "My Projects", href: "/projects", icon: "bi-kanban" },
+  { name: "My Certificates", href: "/certificates", icon: "bi-patch-check" },
+  { name: "My Blogs", href: "/blogs", icon: "bi-journal-text" },
+  { name: "Contact Me", href: "/contact", icon: "bi-envelope" },
+  { name: "Login", href: "/login", icon: "bi-box-arrow-in-right" },
 ];
 const MainNavbar = () => {
   const pathname = usePathname();
@@ -54,30 +54,27 @@ const MainNavbar = () => {
         </nav>
       </div>
       {/* Mobile Navbar */}
-      <div className="mob-nav">
-        <ul className="nav nav-pills">
-          <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">
-              Active
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Link
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Link
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link disabled" aria-disabled="true">
-              Disabled
-            </a>
-          </li>
-        </ul>
-      </div>
+      <nav className="mob-nav">
+        <div className="scroll-row">
+          <ul className="nav flex-nowrap">
+            {pages.map((p) => {
+              const active = pathname === p.href;
+              return (
+                <li className="nav-item me-1" key={p.name}>
+                  <Link
+                    href={p.href}
+                    className={`nav-link ${active ? "active" : ""}`}
+                    aria-label={p.name}
+                  >
+                    <i className={`bi ${p.icon}`} />
+                    <span style={{ fontSize: ".8rem" }}>{p.name}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </nav>
     </>
   );
 };
