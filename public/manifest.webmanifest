@@ -4,9 +4,9 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Soumwadeep Guha's Portfolio",
-  "short_name": "Soumwadeep Guha's Portfolio",
-  "description": "Hi, I\u2019m Soumwadeep Guha \u2014 a passionate Full-Stack Developer skilled in Next.js, React, Bootstrap, MUI, C   , PostgreSQL, Firebase & AWS. Explore my projects, hackathon wins, and creative tech journey building smart, scalable web apps!",
+  "name": "Soumwadeep Guha",
+  "short_name": "Soumwadeep Guha",
+  "description": "A passionate Software & Full-Stack Developer with over 2.5 years of experience in building modern, scalable, and user-centric web applications. Skilled in Next.js, React, Bootstrap, MUI, C++, PostgreSQL, Firebase, and AWS, I love turning ideas into powerful digital solutions. Beyond development, I’m a Smart India Hackathon Winner and a Top 10 Finalist at the Top-10 Finalist at GSMA Hackathon,Google Solution Challenge and IIT HackFest, with multiple recognitions across national-level tech competitions. As an active tech speaker and community contributor, I enjoy sharing knowledge and exploring the intersection of creativity and technology to craft impactful web experiences.",
   "icons": [
     {
       "src": "/icon-192x192.png",

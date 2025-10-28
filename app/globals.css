@@ -1,3 +1,12 @@
+html[data-bs-theme="dark"] {
+  --bs-body-bg: #09081f; /* Your desired dark background color */
+  /* You might also need to adjust text color for readability */
+  --bs-body-color: #eeeeee;
+}
+html[data-bs-theme="light"] {
+  --bs-body-bg: #f2f8f5; /* Your desired light background color */
+  --bs-body-color: #212529;
+}
 a {
   text-decoration: none;
   color: inherit;

@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     template: "%s | Soumwadeep Guha",
   },
   description:
-    "Hi, I’m Soumwadeep Guha — a passionate Full-Stack Developer skilled in Next.js, React, Bootstrap, MUI, C++, PostgreSQL, Firebase & AWS. Explore my projects, hackathon wins, and creative tech journey building smart, scalable web apps!",
+    "A passionate Software & Full-Stack Developer with over 2.5 years of experience in building modern, scalable, and user-centric web applications. Skilled in Next.js, React, Bootstrap, MUI, C++, PostgreSQL, Firebase, and AWS, I love turning ideas into powerful digital solutions. Beyond development, I’m a Smart India Hackathon Winner and a Top 10 Finalist at the Top-10 Finalist at GSMA Hackathon,Google Solution Challenge and IIT HackFest, with multiple recognitions across national-level tech competitions. As an active tech speaker and community contributor, I enjoy sharing knowledge and exploring the intersection of creativity and technology to craft impactful web experiences.",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
@@ -73,10 +73,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title:
-      "Soumwadeep Guha — SoftwareDeveloper | Next.js, React, PostgreSQL, Firebase, AWS",
+    title: "Soumwadeep Guha",
     description:
-      "Explore the portfolio of Soumwadeep Guha — a passionate Full-Stack Developer skilled in Next.js, React, Bootstrap, MUI, C++, PostgreSQL, Firebase, AWS. Discover projects, hackathon wins, and a creative journey building smart, scalable web apps!",
+      "A passionate Software & Full-Stack Developer with over 2.5 years of experience in building modern, scalable, and user-centric web applications. Skilled in Next.js, React, Bootstrap, MUI, C++, PostgreSQL, Firebase, and AWS, I love turning ideas into powerful digital solutions. Beyond development, I’m a Smart India Hackathon Winner and a Top 10 Finalist at the Top-10 Finalist at GSMA Hackathon,Google Solution Challenge and IIT HackFest, with multiple recognitions across national-level tech competitions. As an active tech speaker and community contributor, I enjoy sharing knowledge and exploring the intersection of creativity and technology to craft impactful web experiences.",
     url: "https://next.soumwadeepguha.com",
     type: "website",
     locale: "en_US",
@@ -84,10 +83,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Soumwadeep Guha — Software Developer | Next.js, React, PostgreSQL, Firebase, AWS",
+    title: "Soumwadeep Guha",
     description:
-      "Hi, I’m Soumwadeep Guha — a passionate Full-Stack Developer skilled in Next.js, React, Bootstrap, MUI, C++, PostgreSQL, Firebase & AWS. Explore my projects, hackathon wins, and creative tech journey building smart, scalable web apps!",
+      "A passionate Software & Full-Stack Developer with over 2.5 years of experience in building modern, scalable, and user-centric web applications. Skilled in Next.js, React, Bootstrap, MUI, C++, PostgreSQL, Firebase, and AWS, I love turning ideas into powerful digital solutions. Beyond development, I’m a Smart India Hackathon Winner and a Top 10 Finalist at the Top-10 Finalist at GSMA Hackathon,Google Solution Challenge and IIT HackFest, with multiple recognitions across national-level tech competitions. As an active tech speaker and community contributor, I enjoy sharing knowledge and exploring the intersection of creativity and technology to craft impactful web experiences.",
   },
 };
 
