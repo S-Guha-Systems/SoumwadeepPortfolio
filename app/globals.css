@@ -1,5 +1,5 @@
 html[data-bs-theme="dark"] {
-  --bs-body-bg: #09081f; /* Your desired dark background color */
+  --bs-body-bg: #15202b; /* Your desired dark background color */
   /* You might also need to adjust text color for readability */
   --bs-body-color: #eeeeee;
 }
