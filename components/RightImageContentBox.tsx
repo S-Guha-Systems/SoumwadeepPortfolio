@@ -15,7 +15,17 @@ const RightImageContentBox = ({
     <div className="container my-5">
       <div className="row align-items-center">
         {/* Right Image Section */}
-        <div className="col-sm-5 text-center">
+        <div className="col-sm-6">
+          <div className="outer">
+            <div className="middle">
+              <div className="inner">
+                <h1 className="fw-bold mb-3">{title}</h1>
+                <p className="lh-lg">{content}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-sm-6 text-center">
           <div className="outer">
             <div className="middle">
               <div className="inner">
@@ -23,21 +33,8 @@ const RightImageContentBox = ({
                   src={imgUrl}
                   alt={title}
                   placeholder="blur"
-                  id="animateimg2"
-                  className="img-fluid rounded"
+                  id="animateimg"
                 />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Text Section */}
-        <div className="col-sm-7">
-          <div className="outer">
-            <div className="middle">
-              <div className="inner">
-                <h1 className="fw-bold mb-3">{title}</h1>
-                <p className="lh-lg">{content}</p>
               </div>
             </div>
           </div>

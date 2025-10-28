@@ -15,7 +15,7 @@ const LeftImageContentBox = ({
     <div className="container my-5">
       <div className="row align-items-center">
         {/* Left Image Section */}
-        <div className="col-sm-5 text-center">
+        <div className="col-sm-6 text-center">
           <div className="outer">
             <div className="middle">
               <div className="inner">
@@ -24,7 +24,6 @@ const LeftImageContentBox = ({
                   alt={title}
                   placeholder="blur"
                   id="animateimg2"
-                  className="img-fluid rounded"
                 />
               </div>
             </div>
@@ -32,7 +31,7 @@ const LeftImageContentBox = ({
         </div>
 
         {/* Right Text Section */}
-        <div className="col-sm-7">
+        <div className="col-sm-6">
           <div className="outer">
             <div className="middle">
               <div className="inner">

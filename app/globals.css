@@ -10,10 +10,25 @@ h5,
 h6 {
   font-weight: bold !important;
 }
+.active {
+  color: orangered !important;
+  font-weight: bold !important;
+}
 img {
   border-radius: 10px;
   width: 100%;
   height: auto;
+}
+.mob-nav {
+  display: none;
+}
+@media only screen and (max-width: 962px) {
+  .mob-nav {
+    display: block;
+  }
+  .pc-nav {
+    display: none;
+  }
 }
 /* 360 deg rotation */
 /* .loading { width: 80px; animation-name: spin; animation-duration: 5s; animation-iteration-count: infinite; animation-timing-function: linear; } 
