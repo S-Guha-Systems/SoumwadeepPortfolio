@@ -56,7 +56,7 @@ const themeInit = `
 `;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://soumwadeepguha.com"),
+  metadataBase: new URL("https://next.soumwadeepguha.com"),
   title: {
     default: "Soumwadeep Guha",
     template: "%s | Soumwadeep Guha",
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
       "Soumwadeep Guha — SoftwareDeveloper | Next.js, React, PostgreSQL, Firebase, AWS",
     description:
       "Explore the portfolio of Soumwadeep Guha — a passionate Full-Stack Developer skilled in Next.js, React, Bootstrap, MUI, C++, PostgreSQL, Firebase, AWS. Discover projects, hackathon wins, and a creative journey building smart, scalable web apps!",
-    url: "https://soumwadeepguha.com",
+    url: "https://next.soumwadeepguha.com",
     type: "website",
     locale: "en_US",
     siteName: "Soumwadeep Guha Portfolio",
