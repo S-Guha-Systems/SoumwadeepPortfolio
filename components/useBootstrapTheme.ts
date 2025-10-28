@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 export function useBootstrapTheme() {
   const [mode, setMode] = useState(() => {
     if (typeof window === "undefined") return "auto";
-      return localStorage.getItem("theme") || "auto"; // 'light' | 'dark' | 'auto'
+    return localStorage.getItem("theme") || "auto"; // 'light' | 'dark' | 'auto'
   });
 
   const apply = (m: string) => {

@@ -1,5 +1,5 @@
 html[data-bs-theme="dark"] {
-  --bs-body-bg: #15202b; /* Your desired dark background color */
+  --bs-body-bg: #00001f; /* Your desired dark background color */
   /* You might also need to adjust text color for readability */
   --bs-body-color: #eeeeee;
 }
@@ -19,6 +19,12 @@ h5,
 h6 {
   font-weight: bold !important;
 }
+.mob-logo {
+  display: none;
+}
+.logo {
+  width: 42px;
+}
 .active {
   color: orangered !important;
   font-weight: bold !important;
@@ -35,7 +41,7 @@ img {
   right: 0;
   bottom: 0;
   z-index: 1030;
-  background: rgba(255, 255, 255, 0.75); /* light translucent base */
+  background: #f2f8f5;
   backdrop-filter: blur(10px) saturate(180%);
   -webkit-backdrop-filter: blur(10px) saturate(180%);
   border-top: 1px solid rgba(255, 255, 255, 0.4);
@@ -45,11 +51,11 @@ img {
 }
 
 /* Dark mode variant */
-@media (prefers-color-scheme: dark) {
+html[data-bs-theme="dark"] {
   .mob-nav {
-    background: rgba(9, 8, 31, 0.75); /* your dark theme color translucent */
+    background: #00001f; /* your dark theme color translucent */
     border-top: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 -2px 10px rgba(145, 143, 143, 0.6);
   }
 }
 
@@ -96,6 +102,10 @@ img {
 @media (max-width: 991.98px) {
   body {
     padding-bottom: 70px;
+  }
+  .mob-logo {
+    display: block;
+    max-width: 70px;
   }
   .active {
     color: inherit;

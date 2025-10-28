@@ -18,7 +18,7 @@ const LeftImageContentBox = ({
   ctaComponent2,
 }: LeftImageContentBoxProps) => {
   return (
-    <div className="container my-5">
+    <div className="container my-3">
       <div className="row align-items-center">
         {/* Left Image Section */}
         <div className="col-sm-6 text-center">
@@ -42,8 +42,8 @@ const LeftImageContentBox = ({
             <div className="middle">
               <div className="inner">
                 <h1 className="fw-bold mt-4 mb-3">{title}</h1>
-                {subtitle && <h4 className="mb-3 fst-italic">{subtitle}</h4>}
-                <p className="lh-lg fs-5">{content}</p>
+                {subtitle && <h3 className="mb-3 fst-italic">{subtitle}</h3>}
+                <p className="lh-base fs-5">{content}</p>
                 {ctaComponent && <div className="mt-3">{ctaComponent}</div>}
                 {ctaComponent2 && <div className="mt-3">{ctaComponent2}</div>}
               </div>

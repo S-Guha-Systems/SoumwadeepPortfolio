@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import logo from "@/img/logo.png";
+import ThemeToggler from "./ThemeToggler";
 const pages = [
   { name: "Home", href: "/", icon: "bi-house" },
   { name: "About Myself", href: "/about", icon: "bi-person" },
@@ -20,7 +22,13 @@ const MainNavbar = () => {
       <div className="pc-nav">
         <nav className="navbar navbar-expand-lg text-center">
           <div className="container-fluid">
-            <Link className="navbar-brand" href="#">
+            <Link className="navbar-brand" href="/">
+              <Image
+                src={logo}
+                alt="logo"
+                className="logo"
+                placeholder="blur"
+              />{" "}
               Soumwadeep Guha
             </Link>
             <button
@@ -49,6 +57,7 @@ const MainNavbar = () => {
                   </li>
                 ))}
               </ul>
+              <ThemeToggler />
             </div>
           </div>
         </nav>
@@ -73,6 +82,7 @@ const MainNavbar = () => {
               );
             })}
           </ul>
+          <ThemeToggler />
         </div>
       </nav>
     </>

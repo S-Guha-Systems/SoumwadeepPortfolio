@@ -9,9 +9,9 @@ export default function ThemeToggler() {
     <div className="btn-group" role="group" aria-label="Theme switcher">
       <button
         type="button"
-        className={`btn btn-outline-secondary ${
-          mode === "light" ? "active" : ""
-        }`}
+        className={`btn btn-outline-${
+          mode === "light" ? "secondary" : "primary"
+        } ${mode === "light" ? "active" : ""}`}
         onClick={() => setMode("light")}
         title="Light"
       >
@@ -19,9 +19,9 @@ export default function ThemeToggler() {
       </button>
       <button
         type="button"
-        className={`btn btn-outline-secondary ${
-          mode === "dark" ? "active" : ""
-        }`}
+        className={`btn btn-outline-${
+          mode === "light" ? "secondary" : "primary"
+        } ${mode === "dark" ? "active" : ""}`}
         onClick={() => setMode("dark")}
         title="Dark"
       >
@@ -29,9 +29,9 @@ export default function ThemeToggler() {
       </button>
       <button
         type="button"
-        className={`btn btn-outline-secondary ${
-          mode === "auto" ? "active" : ""
-        }`}
+        className={`btn btn-outline-${
+          mode === "light" ? "secondary" : "primary"
+        } ${mode === "auto" ? "active" : ""}`}
         onClick={() => setMode("auto")}
         title="Auto"
       >
