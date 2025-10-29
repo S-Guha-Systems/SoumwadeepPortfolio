@@ -10,7 +10,7 @@ const CtaButton = ({ title, goto, color, size }: CtaButtonProps) => {
     <div>
       <Link
         href={goto}
-        className={`btn btn-${color ? color : "success"} ${
+        className={`mb-2 btn btn-${color ? color : "success"} ${
           size ? `btn-${size}` : ""
         }`}
       >

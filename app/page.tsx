@@ -52,6 +52,14 @@ const Home = () => {
           🎤 Tech Speaker & Community Contributor
         </div>
       </div>
+      <center>
+        <CtaButton
+          title="Learn more about me"
+          goto="/about"
+          color="outline-info"
+          size=""
+        />
+      </center>
     </>
   );
 };
