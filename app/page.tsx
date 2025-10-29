@@ -1,6 +1,8 @@
 import CtaButton from "@/components/CtaButton";
 import LeftImageContentBox from "@/components/LeftImageContentBox";
+import RightImageContentBox from "@/components/RightImageContentBox";
 import homepic from "@/img/homepic.jpg";
+import logost from "@/img/logost.png";
 
 const Home = () => {
   return (
@@ -38,7 +40,34 @@ const Home = () => {
         backends. I’ve had the opportunity to work on diverse projects that
         blend creativity, logic, and innovation.
       </p>
-      <div className="quick-facts">
+      <center>
+        <CtaButton
+          title="Learn more about me"
+          goto="/about"
+          color="outline-info"
+          size=""
+        />
+      </center>
+      <RightImageContentBox
+        title="Experience Highlights"
+        subtitle=""
+        content="Over the past few years, I’ve contributed to multiple impactful software projects and startups — developing end-to-end web solutions, integrating cloud services, and optimizing performance for modern digital products. I specialize in full stack development, system design, and cloud integration.Currently, I am a Software Developer at Swan Fintech Pvt. Ltd., where I help build scalable web applications that drive business growth and enhance user experiences."
+        imgUrl={logost}
+        ctaComponent={
+          <CtaButton
+            title="View my experience"
+            goto="/experience"
+            size=""
+            color="outline-warning"
+          />
+        }
+      />
+      {/* <h1 className="text-center mt-5">🧠 Featured Projects</h1>
+      <div className="text-center mb-4 fst-italic">
+
+      </div> */}
+
+      {/* <div className="quick-facts">
         <div className="fact delay-1 fs-5 fst-italic">
           🏆 Smart India Hackathon Winner
         </div>
@@ -51,15 +80,7 @@ const Home = () => {
         <div className="fact delay-4 fs-5 fst-italic">
           🎤 Tech Speaker & Community Contributor
         </div>
-      </div>
-      <center>
-        <CtaButton
-          title="Learn more about me"
-          goto="/about"
-          color="outline-info"
-          size=""
-        />
-      </center>
+      </div> */}
     </>
   );
 };

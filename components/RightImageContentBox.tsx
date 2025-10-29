@@ -21,7 +21,7 @@ const RightImageContentBox = ({
     <div className="container my-3">
       <div className="row align-items-center">
         {/* Image Section (appears ABOVE text on mobile, RIGHT on desktop) */}
-        <div className="col-sm-6 text-center order-1 order-sm-2">
+        <div className="col-sm-6 order-1 order-sm-2">
           <div className="outer">
             <div className="middle">
               <div className="inner">
@@ -40,7 +40,7 @@ const RightImageContentBox = ({
         <div className="col-sm-6 order-2 order-sm-1">
           <div className="outer">
             <div className="middle">
-              <div className="inner text-center text-sm-start">
+              <div className="inner text-sm-start">
                 <h1 className="fw-bold mt-4 mb-3">{title}</h1>
                 {subtitle && <h3 className="mb-3 fst-italic">{subtitle}</h3>}
                 <p className="lh-base fs-5">{content}</p>
