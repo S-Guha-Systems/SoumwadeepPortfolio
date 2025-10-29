@@ -20,21 +20,8 @@ const RightImageContentBox = ({
   return (
     <div className="container my-3">
       <div className="row align-items-center">
-        {/* Right Image Section */}
-        <div className="col-sm-6">
-          <div className="outer">
-            <div className="middle">
-              <div className="inner">
-                <h1 className="fw-bold mb-3">{title}</h1>
-                {subtitle && <h3 className="mb-3 fst-italic">{subtitle}</h3>}
-                <p className="lh-base fs-5">{content}</p>
-                {ctaComponent && <div className="mt-3">{ctaComponent}</div>}
-                {ctaComponent2 && <div className="mt-3">{ctaComponent2}</div>}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-sm-6 text-center mt-2">
+        {/* Image Section (appears ABOVE text on mobile, RIGHT on desktop) */}
+        <div className="col-sm-6 text-center order-1 order-sm-2">
           <div className="outer">
             <div className="middle">
               <div className="inner">
@@ -44,6 +31,27 @@ const RightImageContentBox = ({
                   placeholder="blur"
                   id="animateimg"
                 />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Text Section */}
+        <div className="col-sm-6 order-2 order-sm-1">
+          <div className="outer">
+            <div className="middle">
+              <div className="inner text-center text-sm-start">
+                <h1 className="fw-bold mt-4 mb-3">{title}</h1>
+                {subtitle && <h3 className="mb-3 fst-italic">{subtitle}</h3>}
+                <p className="lh-base fs-5">{content}</p>
+                <div className="d-flex flex-wrap justify-content-center justify-content-sm-start gap-2">
+                  {ctaComponent && (
+                    <div className="mt-1 mb-1">{ctaComponent}</div>
+                  )}
+                  {ctaComponent2 && (
+                    <div className="mt-1 mb-1">{ctaComponent2}</div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

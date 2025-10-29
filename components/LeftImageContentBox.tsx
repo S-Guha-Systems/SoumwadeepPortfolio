@@ -44,8 +44,10 @@ const LeftImageContentBox = ({
                 <h1 className="fw-bold mt-4 mb-3">{title}</h1>
                 {subtitle && <h3 className="mb-3 fst-italic">{subtitle}</h3>}
                 <p className="lh-base fs-5">{content}</p>
-                {ctaComponent && <div className="mt-3">{ctaComponent}</div>}
-                {ctaComponent2 && <div className="mt-3">{ctaComponent2}</div>}
+                <div className="d-flex gap-2">
+                  {ctaComponent && <div className="mt-1 mb-1">{ctaComponent}</div>}
+                  {ctaComponent2 && <div className="mt-1 mb-1">{ctaComponent2}</div>}
+                </div>
               </div>
             </div>
           </div>
