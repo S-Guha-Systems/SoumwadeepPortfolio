@@ -12,6 +12,7 @@ import MainFooter from "@/components/MainFooter";
 import Image from "next/image";
 import logo from "@/img/logo.png";
 import Link from "next/link";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
@@ -122,6 +123,7 @@ export default function RootLayout({
           </div>
           <Suspense fallback={<Loading />}>{children}</Suspense>
           <MainFooter />
+          <ScrollToTop />
         </div>
         <BootstrapClient />
       </body>

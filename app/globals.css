@@ -1,5 +1,5 @@
 html[data-bs-theme="dark"] {
-  --bs-body-bg: #00001f; /* Your desired dark background color */
+  --bs-body-bg: #15202b; /* Your desired dark background color */
   /* You might also need to adjust text color for readability */
   --bs-body-color: #eeeeee;
 }
@@ -295,4 +295,25 @@ html[data-bs-theme="dark"] {
 .quick-facts .fact:hover {
   color: orangered;
   transition: color 0.3s ease;
+}
+/* Scroll-to-top button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 4.5rem;
+  right: 1rem;
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.3s ease;
+  transform: translateY(20px);
+}
+
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-3px);
 }

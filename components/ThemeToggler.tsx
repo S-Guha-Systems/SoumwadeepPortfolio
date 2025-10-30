@@ -10,7 +10,7 @@ export default function ThemeToggler() {
       <button
         type="button"
         className={`btn btn-outline-${
-          mode === "light" ? "secondary" : "primary"
+          mode === "light" ? "success" : "success"
         } ${mode === "light" ? "active" : ""}`}
         onClick={() => setMode("light")}
         title="Light"
@@ -20,7 +20,7 @@ export default function ThemeToggler() {
       <button
         type="button"
         className={`btn btn-outline-${
-          mode === "light" ? "secondary" : "primary"
+          mode === "light" ? "success" : "success"
         } ${mode === "dark" ? "active" : ""}`}
         onClick={() => setMode("dark")}
         title="Dark"
@@ -30,7 +30,7 @@ export default function ThemeToggler() {
       <button
         type="button"
         className={`btn btn-outline-${
-          mode === "light" ? "secondary" : "primary"
+          mode === "light" ? "success" : "success"
         } ${mode === "auto" ? "active" : ""}`}
         onClick={() => setMode("auto")}
         title="Auto"
