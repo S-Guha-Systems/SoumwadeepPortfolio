@@ -51,7 +51,7 @@ const RightImageContentBox = ({
                 {subtitle && <h3 className="mb-3 fst-italic">{subtitle}</h3>}
                 {content && <p className="lh-base fs-5">{content}</p>}
                 {(ctaComponent || ctaComponent2) && (
-                  <div className="d-flex flex-wrap justify-content-center justify-content-sm-start gap-2">
+                  <div className="d-flex flex-wrap justify-content-sm-start gap-2">
                     {ctaComponent && <div>{ctaComponent}</div>}
                     {ctaComponent2 && <div>{ctaComponent2}</div>}
                   </div>
