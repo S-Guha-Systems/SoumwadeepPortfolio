@@ -9,7 +9,7 @@ const NotFound = () => {
       subtitle=""
       content="The page you are looking for does not exist or is being updated."
       imgUrl={notfound}
-      ctaComponent={<CtaButton title="Go Home" goto="/" color="" size="" />}
+      ctaComponent={<CtaButton title="Go Home" goto="/" color="success" />}
       ctaComponent2={null}
     />
   );

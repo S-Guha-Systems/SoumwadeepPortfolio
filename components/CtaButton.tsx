@@ -10,7 +10,7 @@ interface CtaButtonProps {
 const CtaButton = ({
   title = "Learn More",
   goto = "#",
-  color = "primary",
+  color = "success",
   size = "",
 }: CtaButtonProps) => {
   return (
